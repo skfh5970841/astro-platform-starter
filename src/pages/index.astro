@@ -1,19 +1,347 @@
----
-import Layout from '../layouts/Layout.astro';
-import Markdown from '../components/Markdown.astro';
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인정보처리방침 - Diver</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #1a365d;
+            font-size: 28px;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #3182ce;
+            padding-bottom: 15px;
+        }
+        
+        .app-name {
+            color: #3182ce;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #2c5282;
+            font-size: 20px;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            padding-left: 12px;
+            border-left: 4px solid #3182ce;
+        }
+        
+        h3 {
+            color: #2d3748;
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #edf2f7;
+            color: #2d3748;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+        
+        .highlight {
+            background-color: #ebf8ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #3182ce;
+        }
+        
+        .contact-info {
+            background-color: #f0fff4;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border: 1px solid #9ae6b4;
+        }
+        
+        .contact-info h3 {
+            color: #276749;
+            margin-top: 0;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+            color: #718096;
+            font-size: 14px;
+        }
+        
+        .effective-date {
+            background-color: #faf5ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 30px;
+            text-align: center;
+            border: 1px solid #d6bcfa;
+        }
+        
+        a {
+            color: #3182ce;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            h2 {
+                font-size: 18px;
+            }
+            
+            table {
+                font-size: 14px;
+            }
+            
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>개인정보처리방침</h1>
+        <p class="app-name">Diver - 심해 집중 타이머</p>
+        
+        <p><strong>[회사명 또는 개인 이름]</strong>(이하 "회사")은(는) 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리방침을 수립·공개합니다.</p>
 
-const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
+        <h2>제1조 (개인정보의 처리 목적)</h2>
+        <p>회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 「개인정보 보호법」 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.</p>
+        <ol>
+            <li><strong>서비스 제공:</strong> 집중 타이머 기능, 세션 기록 및 통계 제공</li>
+            <li><strong>광고 제공:</strong> 맞춤형 광고 제공 및 광고 성과 측정</li>
+            <li><strong>서비스 개선:</strong> 앱 사용 패턴 분석을 통한 서비스 품질 향상</li>
+            <li><strong>오류 분석:</strong> 앱 충돌 및 오류 분석을 통한 안정성 개선</li>
+            <li><strong>알림 발송:</strong> 사용자가 설정한 알림 및 서비스 관련 공지 발송</li>
+        </ol>
 
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
-`;
----
+        <h2>제2조 (수집하는 개인정보의 항목 및 수집방법)</h2>
+        <h3>1. 수집하는 개인정보 항목</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>수집 항목</th>
+                    <th>수집 목적</th>
+                    <th>보유 기간</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>기기 식별자 (광고 ID)</td>
+                    <td>광고 표시 및 분석</td>
+                    <td>앱 삭제 시 또는 사용자 재설정 시까지</td>
+                </tr>
+                <tr>
+                    <td>앱 사용 기록 (집중 시간, 세션 기록)</td>
+                    <td>앱 기능 제공 및 통계</td>
+                    <td>앱 삭제 시까지 (기기 내 저장)</td>
+                </tr>
+                <tr>
+                    <td>구매 정보</td>
+                    <td>인앱 구매 처리</td>
+                    <td>Google Play에서 처리 (직접 저장 안 함)</td>
+                </tr>
+                <tr>
+                    <td>알림 토큰 (선택)</td>
+                    <td>푸시 알림 발송</td>
+                    <td>알림 해제 시 또는 앱 삭제 시까지</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>2. 개인정보 수집방법</h3>
+        <ul>
+            <li>앱 설치 및 사용 과정에서 자동 수집</li>
+            <li>사용자의 선택에 의한 알림 권한 허용 시 수집</li>
+        </ul>
 
-<Layout title="Welcome to Astro.">
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
-    </p>
-</Layout>
+        <h2>제3조 (개인정보의 제3자 제공)</h2>
+        <p>회사는 정보주체의 개인정보를 제1조에서 명시한 범위 내에서만 처리하며, 정보주체의 동의, 법률의 특별한 규정 등 「개인정보 보호법」 제17조 및 제18조에 해당하는 경우에만 개인정보를 제3자에게 제공합니다.</p>
+        
+        <div class="highlight">
+            <p><strong>외부 서비스 제공업체:</strong> 본 앱은 서비스 제공을 위해 다음의 외부 서비스를 사용합니다. 각 서비스는 해당 업체의 개인정보처리방침에 따라 데이터를 처리합니다.</p>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>서비스명</th>
+                    <th>제공업체</th>
+                    <th>목적</th>
+                    <th>개인정보처리방침</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Firebase Analytics</td>
+                    <td>Google LLC</td>
+                    <td>앱 사용 분석</td>
+                    <td><a href="https://policies.google.com/privacy" target="_blank">Google 개인정보처리방침</a></td>
+                </tr>
+                <tr>
+                    <td>Firebase Crashlytics</td>
+                    <td>Google LLC</td>
+                    <td>앱 오류 분석</td>
+                    <td><a href="https://policies.google.com/privacy" target="_blank">Google 개인정보처리방침</a></td>
+                </tr>
+                <tr>
+                    <td>Google AdMob</td>
+                    <td>Google LLC</td>
+                    <td>광고 서비스</td>
+                    <td><a href="https://policies.google.com/privacy" target="_blank">Google 개인정보처리방침</a></td>
+                </tr>
+                <tr>
+                    <td>Google Play Billing</td>
+                    <td>Google LLC</td>
+                    <td>인앱 결제</td>
+                    <td><a href="https://policies.google.com/privacy" target="_blank">Google 개인정보처리방침</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>제4조 (개인정보의 보유 및 이용기간)</h2>
+        <p>회사는 법령에 따른 개인정보 보유·이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의받은 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다.</p>
+        <ul>
+            <li><strong>앱 사용 기록:</strong> 앱 삭제 시까지 (기기 내 로컬 저장)</li>
+            <li><strong>광고 식별자:</strong> 사용자가 재설정하거나 앱 삭제 시까지</li>
+            <li><strong>알림 토큰:</strong> 알림 권한 해제 또는 앱 삭제 시까지</li>
+        </ul>
+
+        <h2>제5조 (개인정보의 파기절차 및 방법)</h2>
+        <p>회사는 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체없이 해당 개인정보를 파기합니다.</p>
+        <h3>1. 파기절차</h3>
+        <p>불필요한 개인정보는 개인정보의 처리가 불필요한 것으로 인정되는 날로부터 5일 이내에 파기합니다.</p>
+        <h3>2. 파기방법</h3>
+        <ul>
+            <li>전자적 파일 형태로 저장된 개인정보는 기록을 재생할 수 없도록 기술적 방법을 사용하여 삭제합니다.</li>
+            <li>앱 삭제 시 기기에 저장된 모든 데이터가 자동으로 삭제됩니다.</li>
+        </ul>
+
+        <h2>제6조 (정보주체의 권리·의무 및 행사방법)</h2>
+        <p>정보주체는 회사에 대해 언제든지 다음 각 호의 개인정보 보호 관련 권리를 행사할 수 있습니다.</p>
+        <ol>
+            <li>개인정보 처리현황 열람 요구</li>
+            <li>오류 등이 있을 경우 정정 요구</li>
+            <li>삭제 요구</li>
+            <li>처리정지 요구</li>
+        </ol>
+        <p>위 권리 행사는 하단의 연락처로 서면, 이메일을 통하여 하실 수 있으며 회사는 이에 대해 지체 없이 조치하겠습니다.</p>
+        
+        <div class="highlight">
+            <p><strong>광고 ID 재설정 방법:</strong></p>
+            <ul>
+                <li>Android: 설정 → Google → 광고 → 광고 ID 재설정</li>
+            </ul>
+        </div>
+
+        <h2>제7조 (개인정보의 안전성 확보조치)</h2>
+        <p>회사는 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.</p>
+        <ol>
+            <li><strong>기술적 조치:</strong> 개인정보는 사용자의 기기에 로컬로 저장되며, 외부 서버로의 전송 시 암호화됩니다.</li>
+            <li><strong>관리적 조치:</strong> 개인정보 취급 직원의 최소화 및 교육</li>
+            <li><strong>물리적 조치:</strong> 외부 서비스 제공업체의 보안 정책 준수</li>
+        </ol>
+
+        <h2>제8조 (아동의 개인정보 보호)</h2>
+        <p>본 앱은 만 14세 미만 아동의 개인정보를 수집하지 않습니다. 만약 법정대리인의 동의 없이 만 14세 미만 아동의 개인정보가 수집된 사실이 확인될 경우, 해당 정보는 지체 없이 삭제됩니다.</p>
+
+        <h2>제9조 (개인정보 처리방침의 변경)</h2>
+        <p>이 개인정보처리방침은 시행일로부터 적용되며, 법령 및 방침에 따른 변경내용의 추가, 삭제 및 정정이 있는 경우에는 변경사항의 시행 7일 전부터 앱 내 공지사항을 통하여 고지할 것입니다.</p>
+
+        <h2>제10조 (개인정보 보호책임자)</h2>
+        <p>회사는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.</p>
+        
+        <div class="contact-info">
+            <h3>📧 개인정보 보호책임자 / 문의처</h3>
+            <p><strong>담당자:</strong> [회사명 또는 개인 이름]</p>
+            <p><strong>이메일:</strong> <a href="mailto:[이메일 주소]">[이메일 주소]</a></p>
+            <p>정보주체는 서비스 이용 중 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 위 연락처로 문의하실 수 있습니다.</p>
+        </div>
+
+        <h2>제11조 (권익침해 구제방법)</h2>
+        <p>정보주체는 개인정보침해로 인한 구제를 받기 위하여 개인정보분쟁조정위원회, 한국인터넷진흥원 개인정보침해신고센터 등에 분쟁해결이나 상담 등을 신청할 수 있습니다.</p>
+        <ul>
+            <li>개인정보분쟁조정위원회: 1833-6972 (<a href="https://www.kopico.go.kr" target="_blank">www.kopico.go.kr</a>)</li>
+            <li>개인정보침해신고센터: 118 (<a href="https://privacy.kisa.or.kr" target="_blank">privacy.kisa.or.kr</a>)</li>
+            <li>대검찰청 사이버수사과: 1301 (<a href="https://www.spo.go.kr" target="_blank">www.spo.go.kr</a>)</li>
+            <li>경찰청 사이버수사국: 182 (<a href="https://ecrm.cyber.go.kr" target="_blank">ecrm.cyber.go.kr</a>)</li>
+        </ul>
+
+        <div class="effective-date">
+            <p><strong>본 개인정보처리방침은 2026년 1월 7일부터 시행됩니다.</strong></p>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 [회사명 또는 개인 이름]. All rights reserved.</p>
+            <p>Diver - 심해 집중 타이머</p>
+        </div>
+    </div>
+</body>
+</html>
