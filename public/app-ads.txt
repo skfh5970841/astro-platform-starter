@@ -1,0 +1,13 @@
+# app-ads.txt for Diver - Focus Timer
+# IAB Tech Lab App-ads.txt Specification
+# Format: <ad_system_domain>, <publisher_account_id>, <relationship_type>, <TAG-ID>
+#
+# IMPORTANT: This file must be hosted at the root of your developer website domain.
+# e.g., https://yourdomain.com/app-ads.txt
+# The developer website URL must match what is set in Google Play Console.
+#
+# Last updated: 2026-02-21
+
+# Google AdMob (Primary ad network)
+googlesyndication.com, pub-7689217572170201, DIRECT, f08c47fec0942fa0
+google.com, pub-7689217572170201, DIRECT, f08c47fec0942fa0
